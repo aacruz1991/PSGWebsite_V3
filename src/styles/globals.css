@@ -1,0 +1,163 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors - Navy Base */
+    --primary-navy: 14 40 65; /* #0E2841 */
+    --primary-blue: 78 149 217; /* #4E95D9 */
+    --primary-light: 220 234 247; /* #DCEAF7 */
+    
+    /* Secondary Colors - Greens */
+    --secondary-dark: 53 101 76; /* #35654C */
+    --secondary-medium: 102 174 136; /* #66AE88 */
+    --secondary-light: 220 236 228; /* #DCECE4 */
+    
+    /* Tertiary Colors - Warm Accents */
+    --tertiary-orange: 233 113 50; /* #E97132 */
+    --tertiary-warm: 242 168 132; /* #F2A884 */
+    --tertiary-light: 251 227 214; /* #FBE3D6 */
+    
+    /* Base Colors */
+    --background: 0 0% 100%;
+    --foreground: 14 40 65;
+
+    --card: 0 0% 100%;
+    --card-foreground: 14 40 65;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 14 40 65;
+
+    --primary: 14 40 65; /* Navy */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 53 101 76; /* Green */
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 234 247; /* Light Blue */
+    --muted-foreground: 14 40 65;
+
+    --accent: 233 113 50; /* Orange */
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 234 247;
+    --input: 220 234 247;
+    --ring: 14 40 65;
+
+    --chart-1: 14 40 65;
+    --chart-2: 78 149 217;
+    --chart-3: 53 101 76;
+    --chart-4: 233 113 50;
+    --chart-5: 102 174 136;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 14 40 65;
+    --foreground: 0 0% 98%;
+
+    --card: 14 40 65;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 14 40 65;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 14 40 65;
+
+    --secondary: 53 101 76;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 53 101 76;
+    --muted-foreground: 0 0% 85%;
+
+    --accent: 233 113 50;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 53 101 76;
+    --input: 53 101 76;
+    --ring: 0 0% 83%;
+
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Helvetica';
+  }
+}
+
+/* Custom animations and utilities */
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Professional typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.tracking-tight {
+  letter-spacing: -0.025em;
+}
+
+.leading-tight {
+  line-height: 1.25;
+}
+
+.leading-relaxed {
+  line-height: 1.625;
+}
