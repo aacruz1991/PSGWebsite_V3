@@ -137,10 +137,9 @@ export default function AboutPage() {
 
           {/* Mission Statement */}
           <div className="bg-gradient-to-r from-[#35654C] to-[#66AE88] rounded-3xl p-12 text-center shadow-2xl">
-            <h2 className="text-2xl lg:text-3xl font-semibold text-white mb-4">Our Mission</h2>
-            <h3 className="text-lg lg:text-xl font-light text-white italic mb-4">
-              "Our mission is the success of your mission"
-            </h3>
+            <h2 className="text-2xl lg:text-3xl font-semibold text-white">
+              Our mission is the success of your mission
+            </h2>
           </div>
         </div>
       </section>
